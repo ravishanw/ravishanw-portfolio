@@ -1,0 +1,32 @@
+* {
+  color: #2F2029;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  background-color: #1AFFE7;
+  box-shadow: 4px 4px #2F2029;
+}
+/* Navbar */
+.nav-brand {
+  height: 50px;
+  width: 60px;
+}
+.nav-brand-link:hover {
+  background-color: #fff;
+  box-shadow: none;
+}
+.nav-num {
+  font-weight: 900;
+  margin-right: 10px;
+}
+/* Hover state neon */
+
