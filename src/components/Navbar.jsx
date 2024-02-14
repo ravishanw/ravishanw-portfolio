@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -7,31 +7,29 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-export default function ButtonAppBar() {
+function Navbar(props) {
   // Items array for navbar
 
-  const navItems = [
-    {
-      num: "01",
-      item: "About me",
-    },
-    {
-      num: "02",
-      item: "My work",
-    },
-    {
-      num: "03",
-      item: "Contact me",
-    },
-    {
-      num: "04",
-      item: "Resume",
-    },
-  ];
+  // const navItems = [
+  //   {
+  //     num: "01",
+  //     item: "About me",
+  //   },
+  //   {
+  //     num: "02",
+  //     item: "My work",
+  //   },
+  //   {
+  //     num: "03",
+  //     item: "Contact me",
+  //   },
+  //   {
+  //     num: "04",
+  //     item: "Resume",
+  //   },
+  // ];
 
   const [navState, setNav] = useState(null);
-
-  const navRef = useRef(null);
 
   // Functions for opening and closing nav menu
 
@@ -60,7 +58,7 @@ export default function ButtonAppBar() {
           color: "#2F2029",
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{ paddingLeft: "50px", paddingRight: "50px" }}>
           <Box sx={{ flex: 1 }}>
             <a href="#" className="nav-brand-link">
               <img
@@ -105,7 +103,7 @@ export default function ButtonAppBar() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {navItems.map((el, index) => {
+                {props.navList.map((el, index) => {
                   return (
                     <a href="#" key={index}>
                       <MenuItem key={index}>
@@ -121,10 +119,10 @@ export default function ButtonAppBar() {
               sx={{
                 display: { xs: "none", md: "flex" },
                 flexGrow: 1,
-                justifyContent: "space-evenly",
+                justifyContent: "space-between",
               }}
             >
-              {navItems.map((el, index) => {
+              {props.navList.map((el, index) => {
                 return (
                   <a href="#" key={index}>
                     <MenuItem
@@ -132,7 +130,6 @@ export default function ButtonAppBar() {
                       sx={{
                         fontWeight: 300,
                       }}
-                      ref={navRef}
                       onClick={addLine}
                     >
                       <span className="nav-num">{el.num}</span>
@@ -148,3 +145,5 @@ export default function ButtonAppBar() {
     </Box>
   );
 }
+
+export default Navbar;
