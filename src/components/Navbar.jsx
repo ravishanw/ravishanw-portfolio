@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useRef } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,10 +11,6 @@ export default function ButtonAppBar() {
   // Items array for navbar
 
   const navItems = [
-    {
-      num: "00",
-      item: "Home",
-    },
     {
       num: "01",
       item: "About me",
@@ -33,7 +29,9 @@ export default function ButtonAppBar() {
     },
   ];
 
-  const [navState, setNav] = React.useState(null);
+  const [navState, setNav] = useState(null);
+
+  const navRef = useRef(null);
 
   // Functions for opening and closing nav menu
 
@@ -43,6 +41,14 @@ export default function ButtonAppBar() {
 
   function closeNav() {
     setNav(null);
+  }
+
+  // Add line when clicked
+
+  function addLine(e) {
+    const nodeArray = document.querySelectorAll(".nav-num");
+    nodeArray.forEach((item) => item.classList.remove("neon-line"));
+    e.target.firstChild.classList.add("neon-line");
   }
 
   return (
@@ -97,7 +103,6 @@ export default function ButtonAppBar() {
                 onClose={closeNav}
                 sx={{
                   display: { xs: "block", md: "none" },
-                  p: "20px",
                 }}
               >
                 {navItems.map((el, index) => {
@@ -122,7 +127,14 @@ export default function ButtonAppBar() {
               {navItems.map((el, index) => {
                 return (
                   <a href="#" key={index}>
-                    <MenuItem key={index} sx={{ fontWeight: 300 }}>
+                    <MenuItem
+                      key={index}
+                      sx={{
+                        fontWeight: 300,
+                      }}
+                      ref={navRef}
+                      onClick={addLine}
+                    >
                       <span className="nav-num">{el.num}</span>
                       {el.item}
                     </MenuItem>

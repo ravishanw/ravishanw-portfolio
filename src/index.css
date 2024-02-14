@@ -28,5 +28,9 @@ a:hover {
   font-weight: 900;
   margin-right: 10px;
 }
-/* Hover state neon */
+/* Clicked underline */
+.neon-line {
+  text-decoration: underline #F899FF 4px;
+  text-underline-offset: 5px;
+}
 
