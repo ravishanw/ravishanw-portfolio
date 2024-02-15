@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
@@ -8,27 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 function Navbar(props) {
-  // Items array for navbar
-
-  // const navItems = [
-  //   {
-  //     num: "01",
-  //     item: "About me",
-  //   },
-  //   {
-  //     num: "02",
-  //     item: "My work",
-  //   },
-  //   {
-  //     num: "03",
-  //     item: "Contact me",
-  //   },
-  //   {
-  //     num: "04",
-  //     item: "Resume",
-  //   },
-  // ];
-
   const [navState, setNav] = useState(null);
 
   // Functions for opening and closing nav menu
@@ -50,12 +30,16 @@ function Navbar(props) {
   }
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box
+      sx={{
+        flexGrow: 1,
+      }}
+    >
       <AppBar
+        className="nav-bar"
         position="static"
         sx={{
           backgroundColor: "#fff",
-          color: "#2F2029",
         }}
       >
         <Toolbar sx={{ paddingLeft: "50px", paddingRight: "50px" }}>
@@ -108,7 +92,7 @@ function Navbar(props) {
                     <a href="#" key={index}>
                       <MenuItem key={index}>
                         <span className="nav-num">{el.num}</span>
-                        {el.item}
+                        <span className="nav-item">{el.item}</span>
                       </MenuItem>
                     </a>
                   );

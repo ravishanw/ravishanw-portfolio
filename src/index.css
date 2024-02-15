@@ -1,5 +1,4 @@
 * {
-  color: #2F2029;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -17,23 +16,31 @@ a {
 }
 a:hover {
   background-color: #1AFFE7;
+  border-radius: 4px;
   box-shadow: 4px 4px #2F2029;
 }
 /* Hovercraft */
-.link-hover {
+/* .link-hover {
   background-color: #1AFFE7;
   box-shadow: 4px 4px #2F2029;
-}
+} */
 /* Navbar */
+.nav-bar li {
+  color:#2F2029;
+}
 .nav-brand {
   height: 50px;
   width: 60px;
+}
+.nav-item {
+  color:#2F2029;
 }
 .nav-brand-link:hover {
   background-color: #fff;
   box-shadow: none;
 }
 .nav-num {
+  color:#2F2029;
   font-weight: 900;
   margin-right: 10px;
 }
@@ -70,4 +77,14 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 200px;
+}
+/* About me */
+.about-me-container {
+  background: linear-gradient(#fff, #2F2029 20%);
+  padding: 50px;
+  color: #fff;
+}
+.about-me-container h2 {
+  font-size: 4rem;
+  font-weight: 900;
 }

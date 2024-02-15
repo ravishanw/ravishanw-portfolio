@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar.jsx";
 import Welcome from "./components/Welcome.jsx";
+import AboutMe from "./components/AboutMe.jsx";
 
 function App() {
   const navItems = [
@@ -25,6 +26,7 @@ function App() {
     <div>
       <Navbar navList={navItems} />
       <Welcome navList={navItems} />
+      <AboutMe />
     </div>
   );
 }
