@@ -1,9 +1,11 @@
-import NeonFluid from "./NeonFluid";
-
-function PinkGrid() {
+function PinkGrid(props) {
   return (
     <div className="pink-grid">
-      <NeonFluid />
+      <img
+        className={props.customClass}
+        src={props.imgSrc}
+        alt={props.imgAlt}
+      />
     </div>
   );
 }

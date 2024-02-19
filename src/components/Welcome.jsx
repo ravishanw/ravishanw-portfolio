@@ -1,6 +1,7 @@
 import Grid from "@mui/material/Grid";
 import PinkGrid from "./PinkGrid";
 import WelcomeMenu from "./WelcomeMenu";
+import FluidImg from "../assets/neon-fluid.png";
 
 function Welcome(props) {
   return (
@@ -21,7 +22,11 @@ function Welcome(props) {
         </div>
       </Grid>
       <Grid item xs={12} md={6}>
-        <PinkGrid />
+        <PinkGrid
+          customClass="neon-fluid"
+          imgSrc={FluidImg}
+          imgAlt="neon fluid graphic"
+        />
       </Grid>
     </Grid>
   );
