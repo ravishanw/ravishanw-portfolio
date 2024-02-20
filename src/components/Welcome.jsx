@@ -7,7 +7,7 @@ function Welcome(props) {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} md={6}>
-        <div className="welcome-container">
+        <div className="welcome-container half-container">
           <p>Hi, my name is</p>
           <h1>
             Ravishan <br />

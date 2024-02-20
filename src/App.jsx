@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar.jsx";
 import Welcome from "./components/Welcome.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 import MyWork from "./components/MyWork.jsx";
+import ContactMe from "./components/ContactMe.jsx";
 
 function App() {
   const navItems = [
@@ -29,6 +30,7 @@ function App() {
       <Welcome navList={navItems} />
       <AboutMe />
       <MyWork />
+      <ContactMe />
     </div>
   );
 }

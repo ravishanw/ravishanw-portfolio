@@ -1,3 +1,5 @@
+/* Global */
+
 * {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -11,10 +13,14 @@ body {
 h1 {
   font-weight: 900;
 }
+h4 {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
 a {
   text-decoration: none;
 }
-a:hover {
+.hover-craft:hover {
   background-color: #1AFFE7;
   border-radius: 4px;
   box-shadow: 4px 4px #2F2029;
@@ -23,12 +29,20 @@ a:hover {
   font-size: 4rem;
   font-weight: 900;
 }
-/* Hovercraft */
-/* .link-hover {
+.half-container {
+  padding: 6rem 0 6rem 6rem;
+}
+.full-container {
+  padding: 6rem;
+}
+.text-highlight {
   background-color: #1AFFE7;
-  box-shadow: 4px 4px #2F2029;
-} */
+  color: #2F2029;
+  padding: 2px;
+}
+
 /* Navbar */
+
 .nav-bar li {
   color:#2F2029;
 }
@@ -48,15 +62,18 @@ a:hover {
   font-weight: 900;
   margin-right: 10px;
 }
+
 /* Clicked underline */
+
 .neon-line {
   text-decoration: underline #F899FF 4px;
   text-underline-offset: 5px;
 }
+
 /* Welcome screen */
+
 .welcome-container {
   color: #2F2029;
-  padding: 50px 0 0 50px;
 }
 .welcome-container h1 {
   font-size: 4rem;
@@ -83,14 +100,12 @@ a:hover {
   flex-direction: column;
   width: 200px;
 }
+
 /* About me */
+
 .about-me-container {
   background: linear-gradient(#fff, #2F2029 20%);
-  padding: 100px 50px;
   color: #fff;
-}
-.about-me-description {
-  padding-right: 60px;
 }
 .skills-container ul {
   list-style-type: none;
@@ -115,13 +130,44 @@ a:hover {
 }
 
 /* My work */
+
 .my-work-container {
-  background: linear-gradient(#2F2029, #fff 20%);
+  background-image: linear-gradient(#2F2029, #fff 20%, #fff 90%, #2F2029);
   color:#2F2029;
-  padding: 100px 50px;
+  position: relative;
+  z-index: 0;
 }
 .cards-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 90%;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+}
+.horizontal-grid {
+  background: url("./assets/pink-grid.png");
+  background-repeat: repeat;
+  background-size: 200px;
+  bottom: 0;
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.horizontal-fluid {
+  height: 100%;
+  left: 0;
+  object-fit: contain;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Contact me */
+
+.contact-me-container {
+  background-color: #2F2029;
+  color:#fff;
 }

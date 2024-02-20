@@ -48,55 +48,58 @@ const uiSkills = [
 function AboutMe() {
   return (
     <Grid className="about-me-container" container spacing={2}>
-      <Grid className="about-me-description" item xs={12} md={6}>
-        <SectionTitle sectionText="About me" />
-        <p>
-          I love puzzles. To me software development is about solving the puzzle
-          of delivering functional user experiences, wrapped in responsive,
-          inviting and accessible interfaces. This is why, with 2+ years of
-          experience in visual design and UI/UX, I deepened my skills in the
-          tech stack, putting all the pieces together.
-        </p>
-        <p>
-          Now I am looking for my next opportunity to bring my knowledge of
-          human centered design and development.
-        </p>
-        <p>These are some of the technologies I work with:</p>
+      <Grid item xs={12} md={6}>
+        <div className="half-container">
+          <SectionTitle sectionText="About me" />
+          <p>
+            <span className="text-highlight">I love puzzles.</span> To me
+            software development is about solving the puzzle of delivering
+            functional user experiences, wrapped in responsive, inviting and
+            accessible interfaces. This is why, with 2+ years of experience in
+            visual design and UI/UX, I deepened my skills in the tech stack,
+            putting all the pieces together.
+          </p>
+          <p>
+            Now I am looking for my next opportunity to bring my knowledge of
+            human centered design and development.
+          </p>
+          <p>These are some of the technologies I work with:</p>
 
-        <Grid className="skills-container" container spacing={2}>
-          <Grid item xs={3}>
-            <h3 className="neon-line">Front End</h3>
-            <ul>
-              {frontEndSkills.map((el, index) => {
-                return <li key={index}>{el}</li>;
-              })}
-            </ul>
+          <Grid className="skills-container" container spacing={2}>
+            <Grid item xs={3}>
+              <h3 className="neon-line">Front End</h3>
+              <ul>
+                {frontEndSkills.map((el, index) => {
+                  return <li key={index}>{el}</li>;
+                })}
+              </ul>
+            </Grid>
+            <Grid item xs={3}>
+              <h3 className="neon-line">Back End</h3>
+              <ul>
+                {backEndSkills.map((el, index) => {
+                  return <li key={index}>{el}</li>;
+                })}
+              </ul>
+            </Grid>
+            <Grid item xs={3}>
+              <h3 className="neon-line">Tools</h3>
+              <ul>
+                {toolSkills.map((el, index) => {
+                  return <li key={index}>{el}</li>;
+                })}
+              </ul>
+            </Grid>
+            <Grid item xs={3}>
+              <h3 className="neon-line">UI/UX</h3>
+              <ul>
+                {uiSkills.map((el, index) => {
+                  return <li key={index}>{el}</li>;
+                })}
+              </ul>
+            </Grid>
           </Grid>
-          <Grid item xs={3}>
-            <h3 className="neon-line">Back End</h3>
-            <ul>
-              {backEndSkills.map((el, index) => {
-                return <li key={index}>{el}</li>;
-              })}
-            </ul>
-          </Grid>
-          <Grid item xs={3}>
-            <h3 className="neon-line">Tools</h3>
-            <ul>
-              {toolSkills.map((el, index) => {
-                return <li key={index}>{el}</li>;
-              })}
-            </ul>
-          </Grid>
-          <Grid item xs={3}>
-            <h3 className="neon-line">UI/UX</h3>
-            <ul>
-              {uiSkills.map((el, index) => {
-                return <li key={index}>{el}</li>;
-              })}
-            </ul>
-          </Grid>
-        </Grid>
+        </div>
       </Grid>
       <Grid className="avatar-container" item xs={12} md={6}>
         <PinkGrid

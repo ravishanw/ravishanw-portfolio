@@ -6,6 +6,7 @@ function WelcomeMenu(props) {
       {props.navList.map((el, index) => {
         return (
           <Button
+            className="hover-craft"
             key={index}
             href="#"
             sx={{

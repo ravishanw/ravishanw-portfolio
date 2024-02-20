@@ -108,7 +108,7 @@ function Navbar(props) {
             >
               {props.navList.map((el, index) => {
                 return (
-                  <a href="#" key={index}>
+                  <a className="hover-craft" href="#" key={index}>
                     <MenuItem
                       key={index}
                       sx={{
