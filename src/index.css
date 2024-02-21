@@ -30,6 +30,7 @@ a {
   font-weight: 900;
 }
 .padding-container {
+  height: 85vh;
   padding: 6rem;
 }
 .text-highlight {
@@ -175,7 +176,23 @@ a {
   background-color: #2F2029;
   color:#fff;
 }
+.contact-me-description {
+  margin-bottom: 50px;
+}
+.socials-container {
+  margin: 50px 0;
+}
+.socials-container a {
+  color:#fff;
+}
+.socials-container a:nth-child(2) {
+  margin: 0 20px;
+}
+.socials-container a:hover {
+  color:#1AFFE7;
+}
 .slanted-container {
+  align-items: center;
   display: flex;
   height:500px;
   justify-content: center;
@@ -184,15 +201,52 @@ a {
 }
 .slanted-grid {
   height: 250px;
-  margin-top: 20%;
   position:relative;
   transform: skew(20deg);
   z-index: 1;
 }
 .slanted-fluid {
   height: 150px;
-  left: 40%;
-  position: absolute;
-  top: 40%;
+  position:absolute;
   z-index: 2;
+}
+.credits-container {
+  margin-top: 12rem;
+  position: relative;
+}
+.credits-top p, .credits-bottom p {
+  font-weight: 300;
+  width: 100%;
+}
+.credits-top, .credits-bottom {
+  display: flex;
+  position: absolute;
+  width: 50%;
+}
+.credits-top {
+  justify-content: end;
+  right: 0;
+}
+.credits-bottom {
+  justify-content: start;
+  bottom: 10%;
+}
+.credits-top-line {
+  background-color: #1AFFE7;
+  height: 100px;
+  position: absolute;
+  right: 45%;
+  top: 18%;
+  width: 1px;
+  z-index: 3;
+}
+.credits-bottom-line {
+  border-left: 1px solid  #1AFFE7;
+  border-top: 1px solid  #1AFFE7;
+  height: 100px;
+  position: absolute;
+  left: 30%;
+  bottom: 18%;
+  width: 30px;
+  z-index: 3;
 }

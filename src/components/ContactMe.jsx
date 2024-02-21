@@ -12,10 +12,11 @@ function ContactMe(props) {
         <Grid item xs={12} md={6}>
           <div className="padding-container">
             <SectionTitle sectionText="Contact me" />
-            <p>
+            <p className="contact-me-description">
               Want to co-create spectacular interfaces, have any questions, or
-              talk pop art? (Seriously, if you’ll let me, I can talk for hours
-              about the continuum that connects Kafka to Giger to Meshuggah)
+              talk pop art?
+              <br /> (Seriously, if you’ll let me, I can talk for hours about
+              the continuum that connects Kafka to Giger to Meshuggah)
             </p>
             <Button
               href="mailto:ravishansays@gmail.com"
@@ -39,13 +40,29 @@ function ContactMe(props) {
               Just send a message!
             </Button>
             <div className="socials-container">
-              <GitHubIcon />
-              <LinkedInIcon />
+              <a href="https://github.com/ravishanw/" target="_blank">
+                <GitHubIcon fontSize="large" />
+              </a>
+              <a href="">
+                <LinkedInIcon fontSize="large" />
+              </a>
             </div>
           </div>
         </Grid>
         <Grid item xs={12} md={6}>
-          <SlantedGrid fluidGraphic={props.fluidGraphic} />
+          <div className="padding-container">
+            <div className="credits-container">
+              <div className="credits-top">
+                <p>
+                  Designed and coded by <br /> Ravishan Wijemanne
+                </p>
+              </div>
+              <SlantedGrid fluidGraphic={props.fluidGraphic} />
+              <div className="credits-bottom">
+                <p>Built using React JS, Vite and MaterialUI</p>
+              </div>
+            </div>
+          </div>
         </Grid>
       </Grid>
     </section>

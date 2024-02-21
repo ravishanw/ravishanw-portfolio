@@ -7,6 +7,8 @@ function SlantedGrid(props) {
         src={SlantedPinkGrid}
         alt="pink grid graphic"
       />
+      <div className="credits-top-line"></div>
+      <div className="credits-bottom-line"></div>
       <img
         className="slanted-fluid"
         src={props.fluidGraphic}
