@@ -9,18 +9,22 @@ function App() {
     {
       num: "01",
       item: "About me",
+      navId: "#about-me",
     },
     {
       num: "02",
       item: "My work",
+      navId: "#my-work",
     },
     {
       num: "03",
       item: "Contact me",
+      navId: "#contact-me",
     },
     {
       num: "04",
       item: "Resume",
+      navId: "#",
     },
   ];
 

@@ -37,9 +37,13 @@ function Navbar(props) {
     >
       <AppBar
         className="nav-bar"
-        position="static"
+        position="fixed"
         sx={{
           backgroundColor: "#fff",
+          filter: "drop-shadow(4px 4px 8px rgba(47, 32, 41, 0.1))",
+          "& .MuiToolbar-root": {
+            padding: "0 6rem",
+          },
         }}
       >
         <Toolbar sx={{ paddingLeft: "50px", paddingRight: "50px" }}>
@@ -89,7 +93,7 @@ function Navbar(props) {
               >
                 {props.navList.map((el, index) => {
                   return (
-                    <a href="#" key={index}>
+                    <a href={el.navId} key={index}>
                       <MenuItem key={index}>
                         <span className="nav-num">{el.num}</span>
                         <span className="nav-item">{el.item}</span>
@@ -108,7 +112,7 @@ function Navbar(props) {
             >
               {props.navList.map((el, index) => {
                 return (
-                  <a className="hover-craft" href="#" key={index}>
+                  <a className="hover-craft" href={el.navId} key={index}>
                     <MenuItem
                       key={index}
                       sx={{

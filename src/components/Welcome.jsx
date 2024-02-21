@@ -5,19 +5,22 @@ import FluidImg from "../assets/neon-fluid.png";
 
 function Welcome(props) {
   return (
-    <Grid container spacing={2}>
+    <Grid className="welcome-container" container spacing={2}>
       <Grid item xs={12} md={6}>
-        <div className="welcome-container half-container">
-          <p>Hi, my name is</p>
+        <div className="padding-container">
+          <p className="welcome-description">Hi, my name is</p>
           <h1>
             Ravishan <br />
             Wijemanne
           </h1>
           <p className="welcome-description">
             I am a full stack web developer & UI/UX designer creating elegant
-            and accessible interfaces. <br /> Also, you can just call me Ravi
-            &#128522;
+            and accessible interfaces.
           </p>
+          <p className="welcome-description">
+            Also, you can just call me Ravi &#128522;
+          </p>
+          <div className="welcome-menu-separator"></div>
           <WelcomeMenu navList={props.navList} />
         </div>
       </Grid>

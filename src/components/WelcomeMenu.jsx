@@ -8,10 +8,10 @@ function WelcomeMenu(props) {
           <Button
             className="hover-craft"
             key={index}
-            href="#"
+            href={el.navId}
             sx={{
               color: "#2F2029",
-              fontSize: "1.2rem",
+              fontSize: "1rem",
               fontWeight: 400,
               textTransform: "none",
               justifyContent: "flex-start",

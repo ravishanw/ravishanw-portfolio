@@ -29,10 +29,7 @@ a {
   font-size: 4rem;
   font-weight: 900;
 }
-.half-container {
-  padding: 6rem 0 6rem 6rem;
-}
-.full-container {
+.padding-container {
   padding: 6rem;
 }
 .text-highlight {
@@ -73,14 +70,21 @@ a {
 /* Welcome screen */
 
 .welcome-container {
+  background: linear-gradient(#fff 90%, #2F2029 98%);
   color: #2F2029;
 }
 .welcome-container h1 {
   font-size: 4rem;
 }
 .welcome-description {
-  font-size: 1.5rem;
-  width: 75%;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.welcome-menu-separator {
+  background-color: #F899FF;
+  height: 4px;
+  margin: 40px 0;
+  width: 15%;
 }
 .pink-grid {
   align-items: center;
@@ -93,7 +97,7 @@ a {
   width: 100%;
 }
 .neon-fluid {
-  height: 600px;
+  height: 34rem;
 }
 .welcome-menu-container {
   display: flex;
@@ -104,7 +108,7 @@ a {
 /* About me */
 
 .about-me-container {
-  background: linear-gradient(#fff, #2F2029 20%);
+  background: linear-gradient(#2F2029 90%, #fff);
   color: #fff;
 }
 .skills-container ul {
@@ -132,7 +136,7 @@ a {
 /* My work */
 
 .my-work-container {
-  background-image: linear-gradient(#2F2029, #fff 20%, #fff 90%, #2F2029);
+  background: linear-gradient(#fff 90%, #2F2029);
   color:#2F2029;
   position: relative;
   z-index: 0;

@@ -43,22 +43,24 @@ const projectsArr = [
 
 function MyWork() {
   return (
-    <div className="my-work-container">
-      <div className="full-container">
-        <SectionTitle sectionText="My work" />
-        <div className="cards-container">
-          {projectsArr.map((el, index) => {
-            return <ProjectCard key={index} elArr={el} id={index} />;
-          })}
+    <section id="my-work">
+      <div className="my-work-container">
+        <div className="padding-container">
+          <SectionTitle sectionText="My work" />
+          <div className="cards-container">
+            {projectsArr.map((el, index) => {
+              return <ProjectCard key={index} elArr={el} id={index} />;
+            })}
+          </div>
+          <img
+            className="horizontal-fluid"
+            src={HorizontalFluid}
+            alt="neon fluid image"
+          />
         </div>
-        <img
-          className="horizontal-fluid"
-          src={HorizontalFluid}
-          alt="neon fluid image"
-        />
+        <div className="horizontal-grid"></div>
       </div>
-      <div className="horizontal-grid"></div>
-    </div>
+    </section>
   );
 }
 
