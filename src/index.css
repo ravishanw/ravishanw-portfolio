@@ -175,3 +175,24 @@ a {
   background-color: #2F2029;
   color:#fff;
 }
+.slanted-container {
+  display: flex;
+  height:500px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.slanted-grid {
+  height: 250px;
+  margin-top: 20%;
+  position:relative;
+  transform: skew(20deg);
+  z-index: 1;
+}
+.slanted-fluid {
+  height: 150px;
+  left: 40%;
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+}

@@ -1,8 +1,11 @@
 import Grid from "@mui/material/Grid";
 import SectionTitle from "./SectionTitle";
 import Button from "@mui/material/Button";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import SlantedGrid from "./SlantedGrid";
 
-function ContactMe() {
+function ContactMe(props) {
   return (
     <section id="contact-me">
       <Grid className="contact-me-container" container spacing={2}>
@@ -35,9 +38,15 @@ function ContactMe() {
             >
               Just send a message!
             </Button>
+            <div className="socials-container">
+              <GitHubIcon />
+              <LinkedInIcon />
+            </div>
           </div>
         </Grid>
-        <Grid item xs={12} md={6}></Grid>
+        <Grid item xs={12} md={6}>
+          <SlantedGrid fluidGraphic={props.fluidGraphic} />
+        </Grid>
       </Grid>
     </section>
   );

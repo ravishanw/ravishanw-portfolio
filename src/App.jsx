@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar.jsx";
+import FluidImg from "./assets/neon-fluid.png";
 import Welcome from "./components/Welcome.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 import MyWork from "./components/MyWork.jsx";
@@ -31,10 +32,10 @@ function App() {
   return (
     <div>
       <Navbar navList={navItems} />
-      <Welcome navList={navItems} />
+      <Welcome fluidGraphic={FluidImg} navList={navItems} />
       <AboutMe />
       <MyWork />
-      <ContactMe />
+      <ContactMe fluidGraphic={FluidImg} />
     </div>
   );
 }
