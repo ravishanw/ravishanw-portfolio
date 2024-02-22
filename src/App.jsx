@@ -4,6 +4,7 @@ import Welcome from "./components/Welcome.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 import MyWork from "./components/MyWork.jsx";
 import ContactMe from "./components/ContactMe.jsx";
+import FloatingSocials from "./components/FloatingSocials.jsx";
 
 function App() {
   const navItems = [
@@ -35,7 +36,8 @@ function App() {
       <Welcome fluidGraphic={FluidImg} navList={navItems} />
       <AboutMe />
       <MyWork />
-      <ContactMe fluidGraphic={FluidImg} />
+      <ContactMe fluidGraphic={FluidImg} navList={navItems} />
+      <FloatingSocials />
     </div>
   );
 }

@@ -4,6 +4,10 @@ import Button from "@mui/material/Button";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SlantedGrid from "./SlantedGrid";
+import FooterLinks from "./FooterLinks";
+import Divider from "@mui/material/Divider";
+
+const currentYear = new Date().getFullYear();
 
 function ContactMe(props) {
   return (
@@ -31,7 +35,7 @@ function ContactMe(props) {
                 justifyContent: "flex-start",
                 "&:hover": {
                   backgroundColor: "#1AFFE7",
-                  border: "none",
+                  border: "1px solid transparent",
                   boxShadow: "4px 4px #fff",
                   color: "#2F2029",
                 },
@@ -47,6 +51,11 @@ function ContactMe(props) {
                 <LinkedInIcon fontSize="large" />
               </a>
             </div>
+            <FooterLinks navList={props.navList} />
+            <Divider sx={{ bgcolor: "#fff", margin: "20px 0", opacity: 0.5 }} />
+            <p className="copyright">
+              Copyright &#169; Ravishan Wijemanne {currentYear}
+            </p>
           </div>
         </Grid>
         <Grid item xs={12} md={6}>

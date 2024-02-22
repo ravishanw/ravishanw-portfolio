@@ -1,16 +1,16 @@
 import Button from "@mui/material/Button";
 
-function WelcomeMenu(props) {
+function FooterLinks(props) {
   return (
-    <div className="welcome-menu-container">
+    <div className="footer-links-container">
       {props.navList.map((el, index) => {
         return (
           <Button
-            className="hover-craft"
+            className="footer-button"
             key={index}
             href={el.navId}
             sx={{
-              color: "#2F2029",
+              color: "#fff",
               fontSize: "1rem",
               fontWeight: 400,
               justifyContent: "flex-start",
@@ -19,6 +19,8 @@ function WelcomeMenu(props) {
 
               "&:hover": {
                 backgroundColor: "#1AFFE7",
+                boxShadow: "4px 4px #fff",
+                color: "#2F2029",
               },
             }}
           >
@@ -31,4 +33,4 @@ function WelcomeMenu(props) {
   );
 }
 
-export default WelcomeMenu;
+export default FooterLinks;
