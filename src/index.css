@@ -18,6 +18,7 @@ h4 {
   font-size: 1.2rem;
 }
 a {
+  color:#2F2029;
   text-decoration: none;
 }
 .hover-craft:hover {
@@ -171,6 +172,10 @@ a {
   top: 10%;
   width: 100%;
   z-index: 2;
+}
+.open-in-new {
+  align-items: center;
+  display: flex;
 }
 
 /* Contact me */
