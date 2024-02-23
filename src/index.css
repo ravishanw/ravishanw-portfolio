@@ -30,7 +30,7 @@ a {
   font-weight: 900;
 }
 .padding-container {
-  height: 85vh;
+  min-height: 85vh;
   padding: 6rem;
 }
 .text-highlight {
@@ -270,6 +270,11 @@ a {
 
 /* Floating socials */
 .floating-socials {
+  background-color: #1AFFE7;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  filter:drop-shadow(0 4px 4px rgba(47, 32, 41, 0.5));
+  flex-direction: column;
   position: fixed;
   right: 0;
   top: 75vh;

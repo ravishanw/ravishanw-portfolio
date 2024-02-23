@@ -30,14 +30,23 @@ function App() {
     },
   ];
 
+  const socialLinks = {
+    linkedIn: "https://www.linkedin.com/in/ravishan-wijemanne-85b9051bb/",
+    gitHub: "https://github.com/ravishanw/",
+  };
+
   return (
     <div>
       <Navbar navList={navItems} />
       <Welcome fluidGraphic={FluidImg} navList={navItems} />
       <AboutMe />
       <MyWork />
-      <ContactMe fluidGraphic={FluidImg} navList={navItems} />
-      <FloatingSocials />
+      <ContactMe
+        fluidGraphic={FluidImg}
+        navList={navItems}
+        socialOb={socialLinks}
+      />
+      <FloatingSocials socialOb={socialLinks} />
     </div>
   );
 }

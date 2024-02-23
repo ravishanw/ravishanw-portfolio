@@ -44,11 +44,11 @@ function ContactMe(props) {
               Just send a message!
             </Button>
             <div className="socials-container">
-              <a href="https://github.com/ravishanw/" target="_blank">
-                <GitHubIcon fontSize="large" />
-              </a>
-              <a href="">
+              <a href={props.socialOb.linkedIn} target="_blank">
                 <LinkedInIcon fontSize="large" />
+              </a>
+              <a href={props.socialOb.gitHub} target="_blank">
+                <GitHubIcon fontSize="large" />
               </a>
             </div>
             <FooterLinks navList={props.navList} />
