@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import SectionTitle from "./SectionTitle";
 import PinkGrid from "./PinkGrid";
@@ -46,8 +47,19 @@ const uiSkills = [
 ];
 
 function AboutMe() {
+  const sectionRef = useRef();
+  const intersectionOptions = {};
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      console.log(entry);
+    }, intersectionOptions);
+    observer.observe(sectionRef.current);
+  }, []);
+
   return (
-    <section id="about-me">
+    <section ref={sectionRef} id="about-me">
       <Grid className="about-me-container" container spacing={2}>
         <Grid item xs={12} md={6}>
           <div className="padding-container">
