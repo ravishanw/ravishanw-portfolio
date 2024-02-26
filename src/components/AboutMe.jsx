@@ -1,4 +1,3 @@
-import { useRef, useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import SectionTitle from "./SectionTitle";
 import PinkGrid from "./PinkGrid";
@@ -46,36 +45,15 @@ const uiSkills = [
   "Wireframing",
 ];
 
-function AboutMe() {
-  const sectionRef = useRef();
-  const [isVisible, setVisible] = useState(false);
-  const intersectionOptions = {
-    root: null,
-    rootMargin: "-400px",
-    threshold: 0,
-  };
-  console.log(isVisible);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setVisible(entry.isIntersecting);
-    }, intersectionOptions);
-    observer.observe(sectionRef.current);
-  }, [sectionRef]);
-
+function AboutMe(props) {
   return (
     <section id="about-me">
-      <Grid
-        ref={sectionRef}
-        className="about-me-container "
-        container
-        spacing={2}
-      >
+      <Grid className="about-me-container " container spacing={2}>
         <Grid item xs={12} md={6}>
           <div
             className={
-              "padding-container " + (isVisible ? "lazy-load" : "invisible")
+              "padding-container " +
+              (props.sectionVisible ? "lazy-load" : "invisible")
             }
           >
             <SectionTitle sectionText="About me" />
@@ -129,7 +107,15 @@ function AboutMe() {
             </Grid>
           </div>
         </Grid>
-        <Grid className="avatar-container" item xs={12} md={6}>
+        <Grid
+          className={
+            "avatar-container " +
+            (props.sectionVisible ? "lazy-load" : "invisible")
+          }
+          item
+          xs={12}
+          md={6}
+        >
           <PinkGrid
             customClass="ravi-avatar"
             imgSrc={RaviAvatar}

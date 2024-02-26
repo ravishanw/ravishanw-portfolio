@@ -41,12 +41,17 @@ a {
 }
 .invisible {
   opacity: 0;
+  transform:translateY(40px)
   /* transition: all 5s; */
 }
 .lazy-load {
   opacity: 1;
-  transition: all 1s;
+  transition: opacity 0.8s, transform 0.5s;
 }
+.three-d-load {
+  transform:perspective(20px)
+}
+
 
 
 /* Navbar */

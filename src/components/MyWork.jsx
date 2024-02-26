@@ -41,11 +41,16 @@ const projectsArr = [
   },
 ];
 
-function MyWork() {
+function MyWork(props) {
   return (
     <section id="my-work">
       <div className="my-work-container">
-        <div className="padding-container">
+        <div
+          className={
+            "padding-container " +
+            (props.sectionVisible ? "lazy-load" : "invisible")
+          }
+        >
           <SectionTitle sectionText="My work" />
           <div className="cards-container">
             {projectsArr.map((el, index) => {

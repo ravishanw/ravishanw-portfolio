@@ -15,47 +15,51 @@ function ContactMe(props) {
       <Grid className="contact-me-container" container spacing={2}>
         <Grid item xs={12} md={6}>
           <div className="padding-container">
-            <SectionTitle sectionText="Contact me" />
-            <p className="contact-me-description">
-              Want to co-create spectacular interfaces, have any questions, or
-              talk pop art?
-              <br /> (Seriously, if you’ll let me, I can talk for hours about
-              the continuum that connects Kafka to Giger to Meshuggah)
-            </p>
-            <Button
-              href="mailto:ravishansays@gmail.com"
-              target="_blank"
-              sx={{
-                border: "1px solid #fff",
-                borderRadius: "4px",
-                color: "#fff",
-                fontSize: "1rem",
-                fontWeight: 400,
-                textTransform: "none",
-                justifyContent: "flex-start",
-                "&:hover": {
-                  backgroundColor: "#1AFFE7",
-                  border: "1px solid transparent",
-                  boxShadow: "4px 4px #fff",
-                  color: "#2F2029",
-                },
-              }}
-            >
-              Just send a message!
-            </Button>
-            <div className="socials-container">
-              <a href={props.socialOb.linkedIn} target="_blank">
-                <LinkedInIcon fontSize="large" />
-              </a>
-              <a href={props.socialOb.gitHub} target="_blank">
-                <GitHubIcon fontSize="large" />
-              </a>
+            <div className={props.sectionVisible ? "lazy-load" : "invisible"}>
+              <SectionTitle sectionText="Contact me" />
+              <p className="contact-me-description">
+                Want to co-create spectacular interfaces, have any questions, or
+                talk pop art?
+                <br /> (Seriously, if you’ll let me, I can talk for hours about
+                the continuum that connects Kafka to Giger to Meshuggah)
+              </p>
+              <Button
+                href="mailto:ravishansays@gmail.com"
+                target="_blank"
+                sx={{
+                  border: "1px solid #fff",
+                  borderRadius: "4px",
+                  color: "#fff",
+                  fontSize: "1rem",
+                  fontWeight: 400,
+                  textTransform: "none",
+                  justifyContent: "flex-start",
+                  "&:hover": {
+                    backgroundColor: "#1AFFE7",
+                    border: "1px solid transparent",
+                    boxShadow: "4px 4px #fff",
+                    color: "#2F2029",
+                  },
+                }}
+              >
+                Just send a message!
+              </Button>
+              <div className="socials-container">
+                <a href={props.socialOb.linkedIn} target="_blank">
+                  <LinkedInIcon fontSize="large" />
+                </a>
+                <a href={props.socialOb.gitHub} target="_blank">
+                  <GitHubIcon fontSize="large" />
+                </a>
+              </div>
+              <FooterLinks navList={props.navList} />
+              <Divider
+                sx={{ bgcolor: "#fff", margin: "20px 0", opacity: 0.5 }}
+              />
+              <p className="copyright">
+                Copyright &#169; Ravishan Wijemanne {currentYear}
+              </p>
             </div>
-            <FooterLinks navList={props.navList} />
-            <Divider sx={{ bgcolor: "#fff", margin: "20px 0", opacity: 0.5 }} />
-            <p className="copyright">
-              Copyright &#169; Ravishan Wijemanne {currentYear}
-            </p>
           </div>
         </Grid>
         <Grid item xs={12} md={6}>

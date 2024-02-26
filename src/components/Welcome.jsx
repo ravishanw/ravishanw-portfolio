@@ -6,7 +6,12 @@ function Welcome(props) {
   return (
     <Grid className="welcome-container" container spacing={2}>
       <Grid item xs={12} md={6}>
-        <div className="padding-container">
+        <div
+          className={
+            "padding-container " +
+            (props.sectionVisible ? "lazy-load" : "invisible")
+          }
+        >
           <p className="welcome-description">Hi, my name is</p>
           <h1>
             Ravishan <br />
