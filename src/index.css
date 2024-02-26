@@ -39,6 +39,15 @@ a {
   color: #2F2029;
   padding: 2px;
 }
+.invisible {
+  opacity: 0;
+  /* transition: all 5s; */
+}
+.lazy-load {
+  opacity: 1;
+  transition: all 1s;
+}
+
 
 /* Navbar */
 

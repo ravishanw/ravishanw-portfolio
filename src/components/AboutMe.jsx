@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import SectionTitle from "./SectionTitle";
 import PinkGrid from "./PinkGrid";
@@ -48,21 +48,36 @@ const uiSkills = [
 
 function AboutMe() {
   const sectionRef = useRef();
-  const intersectionOptions = {};
+  const [isVisible, setVisible] = useState(false);
+  const intersectionOptions = {
+    root: null,
+    rootMargin: "-400px",
+    threshold: 0,
+  };
+  console.log(isVisible);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      console.log(entry);
+      setVisible(entry.isIntersecting);
     }, intersectionOptions);
     observer.observe(sectionRef.current);
-  }, []);
+  }, [sectionRef]);
 
   return (
-    <section ref={sectionRef} id="about-me">
-      <Grid className="about-me-container" container spacing={2}>
+    <section id="about-me">
+      <Grid
+        ref={sectionRef}
+        className="about-me-container "
+        container
+        spacing={2}
+      >
         <Grid item xs={12} md={6}>
-          <div className="padding-container">
+          <div
+            className={
+              "padding-container " + (isVisible ? "lazy-load" : "invisible")
+            }
+          >
             <SectionTitle sectionText="About me" />
             <p>
               <span className="text-highlight">I love puzzles.</span> To me
