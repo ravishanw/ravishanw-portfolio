@@ -14,6 +14,11 @@ function SlantedGrid(props) {
         src={props.fluidGraphic}
         alt="fluid graphic"
       />
+      <img
+        className="slanted-fluid-dopple glow-effect"
+        src={props.fluidGraphic}
+        alt="fluid graphic"
+      />
     </div>
   );
 }

@@ -8,7 +8,7 @@ function PinkGrid(props) {
       />
       {props.imgDopple && (
         <img
-          className="neon-fluid-dopple"
+          className="neon-fluid-dopple glow-effect"
           src={props.imgSrc}
           alt={props.imgAlt}
         />

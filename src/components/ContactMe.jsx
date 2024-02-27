@@ -64,7 +64,12 @@ function ContactMe(props) {
         </Grid>
         <Grid item xs={12} md={6}>
           <div className="padding-container">
-            <div className="credits-container">
+            <div
+              className={
+                "credits-container " +
+                (props.sectionVisible ? "lazy-load" : "invisible")
+              }
+            >
               <div className="credits-top">
                 <p>
                   Designed and coded by <br /> Ravishan Wijemanne

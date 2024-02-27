@@ -28,7 +28,12 @@ function Welcome(props) {
           <WelcomeMenu navList={props.navList} />
         </div>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid
+        className={props.sectionVisible ? "lazy-load" : "invisible"}
+        item
+        xs={12}
+        md={6}
+      >
         <PinkGrid
           customClass="neon-fluid"
           imgSrc={props.fluidGraphic}

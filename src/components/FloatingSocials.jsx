@@ -10,7 +10,11 @@ function FloatingSocials(props) {
         href={props.socialOb.linkedIn}
         target="_blank"
         sx={{
+          borderRadius: "5px 0 0 0",
           color: "#2F2029",
+          "&:hover": {
+            backgroundColor: "#00D0BC",
+          },
         }}
       >
         <LinkedInIcon fontSize="medium" />
@@ -20,7 +24,11 @@ function FloatingSocials(props) {
         href={props.socialOb.gitHub}
         target="_blank"
         sx={{
+          borderRadius: "0 0 0 5px",
           color: "#2F2029",
+          "&:hover": {
+            backgroundColor: "#00D0BC",
+          },
         }}
       >
         <GitHubIcon fontSize="medium" />

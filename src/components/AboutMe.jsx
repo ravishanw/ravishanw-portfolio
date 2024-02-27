@@ -72,7 +72,7 @@ function AboutMe(props) {
             <p>These are some of the technologies I work with:</p>
 
             <Grid className="skills-container" container spacing={2}>
-              <Grid item xs={3}>
+              <Grid item xs={6} md={6} lg={3}>
                 <h3 className="neon-line">Front End</h3>
                 <ul>
                   {frontEndSkills.map((el, index) => {
@@ -80,7 +80,7 @@ function AboutMe(props) {
                   })}
                 </ul>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={6} md={6} lg={3}>
                 <h3 className="neon-line">Back End</h3>
                 <ul>
                   {backEndSkills.map((el, index) => {
@@ -88,7 +88,7 @@ function AboutMe(props) {
                   })}
                 </ul>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={6} md={6} lg={3}>
                 <h3 className="neon-line">Tools</h3>
                 <ul>
                   {toolSkills.map((el, index) => {
@@ -96,7 +96,7 @@ function AboutMe(props) {
                   })}
                 </ul>
               </Grid>
-              <Grid item xs={3}>
+              <Grid item xs={6} md={6} lg={3}>
                 <h3 className="neon-line">UI/UX</h3>
                 <ul>
                   {uiSkills.map((el, index) => {

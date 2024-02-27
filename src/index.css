@@ -45,7 +45,6 @@ a {
 .invisible {
   opacity: 0;
   transform:translateY(40px)
-  /* transition: all 5s; */
 }
 .lazy-load {
   opacity: 1;
@@ -53,24 +52,35 @@ a {
 }
 @keyframes glowEffect {
   0% {
-    transform: translate(-2px, -2px);
+    filter:blur(0);
+  }
+  12.5% {
+    filter:blur(10px);
   }
   25% {
-    transform: translate(-2px, 2px);
+    filter:blur(0);
   }
-  50% {
-    transform: translate(2px, 2px);
-  }
-  75% {
-    transform: translate(2px, -2px);
+  37.5% {
+    filter:blur(0);
   }
   100% {
-    transform: translate(-2px, -2px);
+    filter:blur(0);
   }
 }
-
-
-
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slide-in {
+  animation: slideIn 1s ease-in-out;
+}
+.glow-effect {
+  animation: 8s glowEffect ease-in-out infinite;
+}
 /* Navbar */
 
 .nav-bar li {
@@ -135,8 +145,6 @@ a {
   z-index: 2;
 }
 .neon-fluid-dopple {
-  animation: 3s glowEffect infinite ease-in-out;
-  filter:blur(10px);
   height: 34rem;
   position: absolute;
   z-index: 1;
@@ -256,6 +264,11 @@ a {
 .slanted-fluid {
   height: 150px;
   position:absolute;
+  z-index: 3;
+}
+.slanted-fluid-dopple {
+  height: 150px;
+  position:absolute;
   z-index: 2;
 }
 .credits-container {
@@ -323,4 +336,23 @@ a {
   position: fixed;
   right: 0;
   top: 75vh;
+  z-index: 9999;
+}
+
+/* Media queries */
+@media (max-width: 1300px) {
+
+  /* Welcome screen */
+  
+  .neon-fluid, .neon-fluid-dopple {
+    height: 28rem;
+  }
+}
+@media (max-width: 900px) {
+  /* Welcome screen */
+
+  .padding-container {
+    min-height: 50vh;
+    padding: 6rem 6rem 0 6rem;
+  }
 }

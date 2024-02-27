@@ -58,7 +58,10 @@ function MyWork(props) {
             })}
           </div>
           <img
-            className="horizontal-fluid"
+            className={
+              "horizontal-fluid " +
+              (props.sectionVisible ? "slide-in" : "invisible")
+            }
             src={HorizontalFluid}
             alt="neon fluid image"
           />
