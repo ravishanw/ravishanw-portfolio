@@ -33,6 +33,7 @@ function Welcome(props) {
           customClass="neon-fluid"
           imgSrc={props.fluidGraphic}
           imgAlt="neon fluid graphic"
+          imgDopple={true}
         />
       </Grid>
     </Grid>

@@ -120,6 +120,7 @@ function AboutMe(props) {
             customClass="ravi-avatar"
             imgSrc={RaviAvatar}
             imgAlt="photo of Ravishan Wijemanne"
+            imgDopple={false}
           />
         </Grid>
       </Grid>

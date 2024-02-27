@@ -6,6 +6,13 @@ function PinkGrid(props) {
         src={props.imgSrc}
         alt={props.imgAlt}
       />
+      {props.imgDopple && (
+        <img
+          className="neon-fluid-dopple"
+          src={props.imgSrc}
+          alt={props.imgAlt}
+        />
+      )}
     </div>
   );
 }

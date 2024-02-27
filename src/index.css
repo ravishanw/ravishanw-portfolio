@@ -39,6 +39,9 @@ a {
   color: #2F2029;
   padding: 2px;
 }
+
+/* Animations */
+
 .invisible {
   opacity: 0;
   transform:translateY(40px)
@@ -48,8 +51,22 @@ a {
   opacity: 1;
   transition: opacity 0.8s, transform 0.5s;
 }
-.three-d-load {
-  transform:perspective(20px)
+@keyframes glowEffect {
+  0% {
+    transform: translate(-2px, -2px);
+  }
+  25% {
+    transform: translate(-2px, 2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, -2px);
+  }
 }
 
 
@@ -114,6 +131,15 @@ a {
 }
 .neon-fluid {
   height: 34rem;
+  position: relative;
+  z-index: 2;
+}
+.neon-fluid-dopple {
+  animation: 3s glowEffect infinite ease-in-out;
+  filter:blur(10px);
+  height: 34rem;
+  position: absolute;
+  z-index: 1;
 }
 .welcome-menu-container {
   display: flex;
