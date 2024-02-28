@@ -1,3 +1,4 @@
+import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -14,10 +15,8 @@ function ProjectCard(props) {
         sx={{
           backdropFilter: "blur(10px)",
           backgroundColor: "rgba(255, 255, 255, 0.5)",
-          maxWidth: 345,
-          margin: "0 20px 20px 0",
-          minHeight: 540,
-          minWidth: 200,
+          height: "540px",
+          width: "100%",
         }}
       >
         <CardActionArea>
@@ -25,7 +24,7 @@ function ProjectCard(props) {
             component="img"
             height="200"
             image={props.elArr.projectImg}
-            alt=""
+            alt={props.elArr.projectImgAlt}
           />
           <CardContent>
             <h4>{props.elArr.projectTitle}</h4>

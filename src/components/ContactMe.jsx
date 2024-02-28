@@ -42,7 +42,7 @@ function ContactMe(props) {
                   },
                 }}
               >
-                Just send a message!
+                Send me a message!
               </Button>
               <div className="socials-container">
                 <a href={props.socialOb.linkedIn} target="_blank">

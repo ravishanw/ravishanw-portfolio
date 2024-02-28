@@ -58,7 +58,6 @@ function App() {
     rootMargin: "-400px",
     threshold: 0,
   };
-  console.log("aboutVisible =" + aboutVisible, "workVisible = " + workVisible);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {

@@ -29,6 +29,8 @@ a {
 .section-title {
   font-size: 4rem;
   font-weight: 900;
+  position: relative;
+  z-index: 5;
 }
 .padding-container {
   min-height: 85vh;
@@ -158,7 +160,7 @@ a {
 /* About me */
 
 .about-me-container {
-  background: linear-gradient(#2F2029 90%, #fff);
+  background: linear-gradient(#2F2029 90%, #fff 98%);
   color: #fff;
 }
 .about-me-container p {
@@ -181,7 +183,7 @@ a {
   aspect-ratio: 1/1;
   box-shadow: 4px 4px #1AFFE7;
   border-radius: 4px;
-  height: 400px;
+  height: 25rem;
   object-fit: cover;
   object-position: 0 -10px;
 }
@@ -290,7 +292,7 @@ a {
 }
 .credits-bottom {
   justify-content: start;
-  bottom: 10%;
+  bottom: 5%;
 }
 .credits-top-line {
   background-color: #1AFFE7;
@@ -346,6 +348,40 @@ a {
   
   .neon-fluid, .neon-fluid-dopple {
     height: 28rem;
+  }
+
+  /* My work */
+
+  .horizontal-fluid {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  /* Contact me */
+
+  .slanted-grid {
+    height: 200px;
+  }
+  .credits-bottom {
+    bottom: 0;
+  }
+
+}
+@media (max-width: 940px) {
+
+  /* About me */
+
+  .ravi-avatar {
+    margin: 4rem 0;
+  }
+
+  /* My work */
+
+  .cards-container {
+    justify-content: center;
+  }
+  .project-card {
+    min-width: 100%;
   }
 }
 @media (max-width: 900px) {

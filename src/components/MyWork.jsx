@@ -3,12 +3,14 @@ import DiscoreImg from "../assets/discoreHome.png";
 import MoodyBooksImg from "../assets/moodyBooksDesktop.jpg";
 import ComveyImg from "../assets/ComveyHome.jpg";
 import ToDoImg from "../assets/toDo-ravishan-wijemanne.jpg";
+import Grid from "@mui/material/Grid";
 import ProjectCard from "./ProjectCard";
 import HorizontalFluid from "../assets/horizontal-fluid.png";
 
 const projectsArr = [
   {
     projectImg: DiscoreImg,
+    projectImgAlt: "Desktop UI image of Discore App",
     projectTitle: "Discore",
     projectDesc:
       "This music review app uses the MusicBrainz API to pull artist information, storing user data in a PostgreSQL database.",
@@ -17,6 +19,7 @@ const projectsArr = [
   },
   {
     projectImg: MoodyBooksImg,
+    projectImgAlt: "Desktop UI image of MoodyBooks app",
     projectTitle: "Moody Books",
     projectDesc:
       "JavaScript/NodeJS app gets book recommendations based on a mood selection, using the Penguin House API",
@@ -25,6 +28,7 @@ const projectsArr = [
   },
   {
     projectImg: ComveyImg,
+    projectImgAlt: "Desktop UI image of the ComveyGroup website",
     projectTitle: "Comvey Group",
     projectDesc:
       "Commercial website for Comvey Group, using HTML, CSS, JavaScript. The newsletter sign-on app, built with Node JS, uses the Mailchimp API to sign-up users for a mailing list",
@@ -33,6 +37,7 @@ const projectsArr = [
   },
   {
     projectImg: ToDoImg,
+    projectImgAlt: "Desktop UI image of ToDo app",
     projectTitle: "ToDo",
     projectDesc:
       "This JavaScript/NodeJS app features two discrete lists, task creation, task cross-out. Uses arrays and EJS to store and pass user data.",
@@ -52,11 +57,16 @@ function MyWork(props) {
           }
         >
           <SectionTitle sectionText="My work" />
-          <div className="cards-container">
+
+          <Grid className="cards-container" container spacing={3}>
             {projectsArr.map((el, index) => {
-              return <ProjectCard key={index} elArr={el} id={index} />;
+              return (
+                <Grid key={index} item lg={3} md={6}>
+                  <ProjectCard key={index} elArr={el} id={index} />
+                </Grid>
+              );
             })}
-          </div>
+          </Grid>
           <img
             className={
               "horizontal-fluid " +
