@@ -55,7 +55,7 @@ function App() {
 
   const intersectionOptions = {
     root: null,
-    rootMargin: "-400px",
+    rootMargin: "-25%",
     threshold: 0,
   };
 

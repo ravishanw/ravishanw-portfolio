@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
@@ -42,7 +41,7 @@ function Navbar(props) {
           backgroundColor: "#fff",
           filter: "drop-shadow(4px 4px 8px rgba(47, 32, 41, 0.1))",
           "& .MuiToolbar-root": {
-            padding: "0 6rem",
+            padding: { xs: "0 2rem", sm: "0 4rem", md: "0 6rem" },
           },
         }}
       >

@@ -385,11 +385,12 @@ a {
   }
 }
 @media (max-width: 900px) {
+
   /* Welcome screen */
 
   .padding-container {
     min-height: 50vh;
-    padding: 6rem 6rem 0 6rem;
+    padding: 4rem 4rem 0 4rem;
   }
 
   /* Contact me */
@@ -410,6 +411,13 @@ a {
   .neon-fluid, .neon-fluid-dopple {
     height: 25rem;
   }
+
+  /* About me */
+
+  .ravi-avatar {
+    height: 20rem;
+  }
+
   /* Contact me */
   .slanted-grid {
     height: 150px;
@@ -418,10 +426,18 @@ a {
     height: 100px;
   }
 }
+@media (max-width:600px) {
+  .padding-container {
+    padding: 4rem 2rem 0 2rem;
+  }
+}
 @media (max-width:450px) {
 
   /* Welcome */
-  
+
+  .section-title {
+    font-size: 2.5rem;
+  }
   .neon-fluid, .neon-fluid-dopple {
     height: 20rem;
   }
@@ -433,5 +449,17 @@ a {
   }
   .slanted-fluid, .slanted-fluid-dopple {
     height: 100px;
+  }
+}
+@media (max-width:380px) {
+
+  /* Welcome */
+
+  .neon-fluid, .neon-fluid-dopple {
+    height: 12rem;
+  }
+  /* About me */
+  .ravi-avatar {
+    height: 15rem;
   }
 }
