@@ -118,9 +118,9 @@ a {
   background: linear-gradient(#fff 90%, #2F2029 98%);
   color: #2F2029;
 }
-.welcome-container h1 {
+/* .welcome-container h1 {
   font-size: 4rem;
-}
+} */
 .welcome-description {
   margin-bottom: 20px;
   font-size: 1.2rem;
@@ -390,5 +390,48 @@ a {
   .padding-container {
     min-height: 50vh;
     padding: 6rem 6rem 0 6rem;
+  }
+
+  /* Contact me */
+
+  .credits-container {
+    margin-top: 0;
+  }
+
+}
+@media (max-width:650px) {
+
+  /* Welcome */
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .neon-fluid, .neon-fluid-dopple {
+    height: 25rem;
+  }
+  /* Contact me */
+  .slanted-grid {
+    height: 150px;
+  }
+  .slanted-fluid, .slanted-fluid-dopple {
+    height: 100px;
+  }
+}
+@media (max-width:450px) {
+
+  /* Welcome */
+  
+  .neon-fluid, .neon-fluid-dopple {
+    height: 20rem;
+  }
+
+  /* Contact me */
+
+  .slanted-grid {
+    height: 120px;
+  }
+  .slanted-fluid, .slanted-fluid-dopple {
+    height: 100px;
   }
 }

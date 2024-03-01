@@ -71,7 +71,7 @@ function Navbar(props) {
                 onClick={openNav}
                 color="inherit"
               >
-                <MenuIcon />
+                <MenuIcon sx={{ color: "#2F2029" }} />
               </IconButton>
               <Menu
                 id="nav-appbar"

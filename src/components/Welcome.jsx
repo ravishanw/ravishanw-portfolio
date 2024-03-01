@@ -13,7 +13,7 @@ function Welcome(props) {
           }
         >
           <p className="welcome-description">Hi, my name is</p>
-          <h1>
+          <h1 className="section-title">
             Ravishan <br />
             Wijemanne
           </h1>
