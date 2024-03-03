@@ -12,21 +12,25 @@ const navItems = [
     num: "01",
     item: "About me",
     navId: "#about-me",
+    targetBlank: false,
   },
   {
     num: "02",
     item: "My work",
     navId: "#my-work",
+    targetBlank: false,
   },
   {
     num: "03",
     item: "Contact me",
     navId: "#contact-me",
+    targetBlank: false,
   },
   {
     num: "04",
-    item: "Resume",
-    navId: "#",
+    item: "Request resume",
+    navId: "mailto:ravishansays@gmail.com?subject=Requesting%20resume",
+    targetBlank: true,
   },
 ];
 

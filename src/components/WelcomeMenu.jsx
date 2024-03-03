@@ -9,6 +9,7 @@ function WelcomeMenu(props) {
             className="hover-craft"
             key={index}
             href={el.navId}
+            target={el.targetBlank ? "_blank" : ""}
             sx={{
               color: "#2F2029",
               fontSize: "1rem",

@@ -9,6 +9,7 @@ function FooterLinks(props) {
             className="footer-button"
             key={index}
             href={el.navId}
+            target={el.targetBlank ? "_blank" : ""}
             sx={{
               color: "#fff",
               fontSize: "1rem",

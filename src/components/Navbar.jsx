@@ -92,7 +92,11 @@ function Navbar(props) {
               >
                 {props.navList.map((el, index) => {
                   return (
-                    <a href={el.navId} key={index}>
+                    <a
+                      href={el.navId}
+                      target={el.targetBlank ? "_blank" : ""}
+                      key={index}
+                    >
                       <MenuItem key={index}>
                         <span className="nav-num">{el.num}</span>
                         <span className="nav-item">{el.item}</span>
@@ -111,7 +115,12 @@ function Navbar(props) {
             >
               {props.navList.map((el, index) => {
                 return (
-                  <a className="hover-craft" href={el.navId} key={index}>
+                  <a
+                    className="hover-craft"
+                    href={el.navId}
+                    target={el.targetBlank ? "_blank" : ""}
+                    key={index}
+                  >
                     <MenuItem
                       key={index}
                       sx={{
