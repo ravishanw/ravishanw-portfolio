@@ -15,7 +15,7 @@ const projectsArr = [
     projectDesc:
       "This music review app uses the MusicBrainz API to pull artist information, storing user data in a PostgreSQL database.",
     projectTech: ["JavaScript", "NodeJS", "EJS", "PostgreSQL"],
-    projectLink: "https://peach-abalone-gear.cyclic.app/",
+    projectLink: "https://di-score.com",
   },
   {
     projectImg: MoodyBooksImg,
@@ -24,7 +24,7 @@ const projectsArr = [
     projectDesc:
       "JavaScript/NodeJS app gets book recommendations based on a mood selection, using the Penguin House API",
     projectTech: ["JavaScript", "NodeJS", "EJS", "REST API"],
-    projectLink: "https://fair-blue-harp-seal-slip.cyclic.cloud/",
+    projectLink: "https://moody-books-production.up.railway.app",
   },
   {
     projectImg: ComveyImg,
@@ -42,7 +42,7 @@ const projectsArr = [
     projectDesc:
       "This JavaScript/NodeJS app features two discrete lists, task creation, task cross-out. Uses arrays and EJS to store and pass user data.",
     projectTech: ["JavaScript", "HTML/CSS", "Bootstrap", "JQuery"],
-    projectLink: "https://teal-adventurous-lemur.cyclic.cloud/",
+    projectLink: "https://to-do-list-app-production-06e6.up.railway.app/",
   },
 ];
 
