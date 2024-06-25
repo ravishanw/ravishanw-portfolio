@@ -2,7 +2,7 @@ import SectionTitle from "./SectionTitle";
 import DiscoreImg from "../assets/discoreHome.png";
 import MoodyBooksImg from "../assets/moodyBooksDesktop.jpg";
 import ComveyImg from "../assets/ComveyHome.jpg";
-import ToDoImg from "../assets/toDo-ravishan-wijemanne.jpg";
+import KheroonImg from "../assets/kheroonDesktop.jpg";
 import Grid from "@mui/material/Grid";
 import ProjectCard from "./ProjectCard";
 import HorizontalFluid from "../assets/horizontal-fluid.png";
@@ -14,7 +14,15 @@ const projectsArr = [
     projectTitle: "Discore",
     projectDesc:
       "This music review app uses the MusicBrainz API to pull artist information, storing user data in a PostgreSQL database.",
-    projectTech: ["JavaScript", "NodeJS", "EJS", "PostgreSQL"],
+    projectTech: [
+      "JavaScript",
+      "NodeJS",
+      "Express JS",
+      "OAuth",
+      "EJS",
+      "PostgreSQL",
+      "REST API",
+    ],
     projectLink: "https://di-score.com",
   },
   {
@@ -23,8 +31,17 @@ const projectsArr = [
     projectTitle: "Moody Books",
     projectDesc:
       "JavaScript/NodeJS app gets book recommendations based on a mood selection, using the Penguin House API",
-    projectTech: ["JavaScript", "NodeJS", "EJS", "REST API"],
+    projectTech: ["JavaScript", "NodeJS", "EJS", "Express JS", "REST API"],
     projectLink: "https://moody-books-production.up.railway.app",
+  },
+  {
+    projectImg: KheroonImg,
+    projectImgAlt: "Desktop UI image of Kheroon website",
+    projectTitle: "Kheroon",
+    projectDesc:
+      "Fully responsive website built for Kheroon Jewelleries, using ReactJS, Vite and Material UI.",
+    projectTech: ["ReactJS", "JavaScript", "Material UI", "HTML/CSS"],
+    projectLink: "https://ravishanw.github.io/kheroon/",
   },
   {
     projectImg: ComveyImg,
@@ -34,15 +51,6 @@ const projectsArr = [
       "Commercial website for Comvey Group, using HTML, CSS, JavaScript. The newsletter sign-on app, built with Node JS, uses the Mailchimp API to sign-up users for a mailing list",
     projectTech: ["JavaScript", "HTML/CSS", "Bootstrap", "JQuery"],
     projectLink: "https://ravishanw.github.io/Comvey-site-dev/",
-  },
-  {
-    projectImg: ToDoImg,
-    projectImgAlt: "Desktop UI image of ToDo app",
-    projectTitle: "ToDo",
-    projectDesc:
-      "This JavaScript/NodeJS app features two discrete lists, task creation, task cross-out. Uses arrays and EJS to store and pass user data.",
-    projectTech: ["JavaScript", "HTML/CSS", "Bootstrap", "JQuery"],
-    projectLink: "https://to-do-list-app-production-06e6.up.railway.app/",
   },
 ];
 
